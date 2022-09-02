@@ -45,4 +45,12 @@ describe("Calculator", () => {
     cy.get('#operator-equals').click();
     cy.get('.display').should('contain', '20100008')
   })
+
+  it('should output err when number divided by zero', () =>{
+    cy.get('#number2').click();
+    cy.get('#operator-divide').click();
+    cy.get('#number0').click();
+    cy.get('#operator-equals').click();
+    cy.get('.display').should('contain', 'err')
+  })
 })

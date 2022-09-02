@@ -38,7 +38,7 @@ describe('Calculator', () => {
     fireEvent.click(buttonEquals);
     expect(runningTotal.textContent).toEqual('3');
   })
-  it('Should multiply numbers and return totla', () => {
+  it('Should multiply numbers and return total', () => {
     const button3 = container.getByTestId('number3');
     const button5 = container.getByTestId('number5');
     const buttonMulti = container.getByTestId('operator-multiply');
